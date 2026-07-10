@@ -1,6 +1,6 @@
 {
   "name": "opencode-model-discovery",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Auto-discovers models from OpenAI-compatible providers via /v1/models endpoint",
   "type": "module",
   "main": "index.js",
