@@ -60,12 +60,12 @@ export const server = async () => {
           const models = await fetchModels(baseURL, p.options?.apiKey);
           cache.set(baseURL, { models, ts: Date.now() });
           p.models = models;
-          console.error(`[model-discovery] Discovered ${Object.keys(models).length} models from ${baseURL}`);
+          console.log(`[model-discovery] Discovered ${Object.keys(models).length} models from ${baseURL}`);
         } catch (err) {
           console.error(`[model-discovery] Failed to fetch models from ${baseURL}: ${err.message}`);
           if (cached) {
             p.models = cached.models;
-            console.error(`[model-discovery] Using cached models for ${baseURL}`);
+            console.warn(`[model-discovery] Using cached models for ${baseURL}`);
           }
         }
       }
