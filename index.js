@@ -41,7 +41,7 @@ async function fetchModels(baseURL, apiKey) {
   return toModels(body.data);
 }
 
-export const ModelDiscoveryPlugin = async () => {
+export const server = async () => {
   return {
     config: async (config) => {
       if (!config.provider) return;
