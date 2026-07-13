@@ -3,7 +3,7 @@ const cache = new Map();
 
 function toName(id) {
   return id
-    .split(/[/:\-_.]/)
+    .split(/[/:\-_]/)
     .filter(w => w.length > 0)
     .map(w => w === 'free' ? '(Free)' : w.charAt(0).toUpperCase() + w.slice(1))
     .join(' ')
